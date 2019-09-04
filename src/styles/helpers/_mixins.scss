@@ -1,0 +1,77 @@
+@mixin font-face($font-family, $font-type, $font-weight: normal, $font-style: normal) {
+	@font-face {
+		font-family: '#{$font-family}';
+		src: url('../fonts/#{$font-family}/#{$font-type}.eot');
+		src: url('../fonts/#{$font-family}/#{$font-type}.eot?#iefix') format('embedded-opentype'),
+		     url('../fonts/#{$font-family}/#{$font-type}.woff') format('woff'),
+		     url('../fonts/#{$font-family}/#{$font-type}.ttf') format('truetype'),
+		     url('../fonts/#{$font-family}/#{$font-type}.svg##{$font-type}') format('svg');
+		font-weight: $font-weight;
+		font-style: $font-style;
+	}
+}
+
+
+@mixin font-primary($size: false, $colour: false, $weight: false, $lh: false, $style: false) {
+  font-family: 'Muller', sans-serif;
+
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $style {
+    font-style: $style;
+  }
+}
+
+
+@mixin font-secondary($size: false, $colour: false, $weight: false, $lh: false, $style: false) {
+  font-family: 'Open Sans', sans-serif;
+
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $style {
+    font-style: $style;
+  }
+}
+
+
+//Media mixin desktop first
+@mixin for-tablet-portrait-up {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}

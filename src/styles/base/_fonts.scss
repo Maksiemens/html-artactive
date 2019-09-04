@@ -1,0 +1,13 @@
+//Open Sans
+@include font-face('Open Sans', 'OpenSans-Italic', 400, italic);
+@include font-face('Open Sans', 'OpenSans-Regular', 400);
+@include font-face('Open Sans', 'OpenSans-SemiBold', 600);
+@include font-face('Open Sans', 'OpenSans-Bold', 700);
+@include font-face('Open Sans', 'OpenSans-ExtraBold', 800);
+
+//Muller
+@include font-face('Muller', 'MullerRegular', 400);
+@include font-face('Muller', 'MullerMedium', 500);
+@include font-face('Muller', 'MullerBold', 700);
+@include font-face('Muller', 'MullerExtraBold', 800);
+@include font-face('Muller', 'MullerHeavy', 900);

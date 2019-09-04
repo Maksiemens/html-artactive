@@ -1,0 +1,162 @@
+.footer {
+  margin-top: 150px;
+  padding: 30px 0;
+  background-color: $color-8;
+
+  &__container {
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba($color-1, 0.2);
+  }
+}
+
+.logo {
+
+  &__link {
+
+    &_footer {
+      background: url('../img/logo/logo-footer.svg') no-repeat center center / contain;
+    }
+  }
+}
+
+.nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+
+    &_footer {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__link {
+
+    &_footer {
+      @include font-secondary(16px, $color-1, 400);
+    }
+  }
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  &__list {
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: 25px;
+    }
+  }
+
+  &__link {
+    @include font-secondary(20px, $color-1, 400);
+    display: flex;
+    transition: all 0.25s;
+
+    &:hover {
+      @include font-secondary(20px, $color-3, 400);
+    }
+  }
+
+  &__svg {
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
+    width: 26px;
+    height: 26px;
+
+    &:hover {
+      fill: currentColor;
+    }
+  }
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: (640 / 1170) * 100%;
+
+  &__list {
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  &__link {
+    @include font-secondary(16px, $color-1, 400);
+    transition: all 0.25s;
+
+    &:hover {
+      @include font-secondary(16px, $color-3, 400);
+    }
+  }
+}
+
+.copyright {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__text {
+    @include font-secondary(12px, $color-1, 400);
+  }
+}
+
+.social {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    display: flex;
+
+    &:hover {
+      .social__svg {
+        fill: $color-3;
+      }
+    }
+  }
+
+  &__svg {
+    width: 26px;
+    height: 26px;
+    fill: $color-1;
+    transition: all 0.25s;
+  }
+}
+

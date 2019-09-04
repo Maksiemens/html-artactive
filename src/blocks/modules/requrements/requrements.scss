@@ -1,0 +1,46 @@
+.requrements {
+  padding: 140px 0 100px 0;
+  background: url('../img/bg-2-1.jpg') no-repeat center center / cover;
+
+  .heading {
+    text-align: center;
+
+    &__title {
+      @include font-primary(42px, $color-1, 400);
+    }
+  }
+
+  .content {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: repeat(auto-fit, minmax(44.545%, 1fr));
+    grid-column-gap: 100px;
+
+    &__description {
+    }
+
+    &__text {
+      @include font-secondary(16px, $color-1, 400, 22px);
+      max-width: 550px;
+      hyphens: none;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+
+      &:not(:first-child) {
+        margin-top: 25px;
+      }
+    }
+
+    &__wrapper-img {
+    }
+
+    &__img {
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__container {
+  }
+}

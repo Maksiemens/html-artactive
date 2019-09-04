@@ -1,0 +1,257 @@
+.header {
+  background-color: $color-1;
+  position: sticky;
+  z-index: 200;
+  top: 0;
+  padding: 10px 0;
+
+  @include for-tablet-landscape-up {
+    // position: static;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-2, 0.32);
+      position: fixed;
+      z-index: 200;
+      top: -9999em;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s, top 0s 0.5s;
+    }
+
+    &.show-overlay {
+      &::after {
+        content: '';
+        top: 0;
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+    }
+  }
+}
+
+.logo {
+
+  &__link {
+    display: block;
+    width: 135px;
+    height: 25px;
+    background: url('../img/logo/logo.svg') no-repeat center center / contain;
+  }
+}
+
+.hamburger {
+
+  &__button {
+    display: flex;
+
+    &:disabled {
+      .hamburger__svg {
+        fill: $color-9;
+      }
+    }
+
+    &:hover:enabled {
+      .hamburger__svg {
+        fill: $color-90;
+      }
+    }
+  }
+
+  &__svg {
+    width: 23px;
+    height: 23px;
+    fill: $color-8;
+    transition: all 0.25s;
+    pointer-events: none;
+  }
+}
+
+.sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // width: 100%;
+  // max-width: 260px;
+
+  @include for-tablet-landscape-up {
+    background-color: $color-1;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -100%;
+    width: 260px;
+    transition: all 0.5s;
+  }
+
+  &.show-sidenav {
+    left: 0;
+  }
+
+
+
+}
+
+.nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-tablet-landscape-up {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 35px 25px;
+      // width: 100%;
+      border-top: 1px solid #e1e1e1;
+
+      order: 2;
+
+    }
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include for-tablet-landscape-up {
+        margin-right: 0;
+      }
+    }
+
+    @include for-tablet-landscape-up {
+
+      &:not(:first-child) {
+        margin-top: 30px;
+      }
+
+      // margin-top: 35px;
+    }
+  }
+
+  &__link {
+    @include font-secondary(16px, $color-2, 400);
+    transition: all 0.25s;
+
+    &_active {
+      @include font-secondary(16px, $color-8, 400);
+    }
+
+    &:hover {
+      @include font-secondary(16px, $color-3, 400);
+    }
+  }
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include for-tablet-landscape-up {
+    padding: 30px 25px 25px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    order: -1;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 10px;
+
+    @include for-tablet-landscape-up {
+      margin-right: 0;
+      margin-top: 20px;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  &__text {
+    @include font-secondary(14px, $color-2, 400);
+
+    @include for-tablet-landscape-up {
+      @include font-secondary(20px, $color-2, 400);
+    }
+  }
+
+  &__link {
+    @include font-secondary(12px, $color-11, 400);
+    transition: all 0.25s;
+
+    @include for-tablet-landscape-up {
+      @include font-secondary(13px, $color-2, 400);
+      margin-top: 10px;
+    }
+
+    &:hover {
+      @include font-secondary(12px, $color-3, 400);
+
+      @include for-tablet-landscape-up {
+        @include font-secondary(13px, $color-3, 400);
+      }
+    }
+  }
+
+  &__avatar {
+  }
+
+  &__picture {
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__action {
+    margin-left: 15px;
+
+    @include for-tablet-landscape-up {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: flex;
+
+    &:disabled {
+      .account__svg {
+        fill: $color-9;
+      }
+    }
+
+    &:hover:enabled {
+      .account__svg {
+        fill: $color-90;
+      }
+    }
+  }
+
+  &__svg {
+    width: 24px;
+    height: 20px;
+    fill: $color-8;
+    transition: all 0.25s;
+  }
+}

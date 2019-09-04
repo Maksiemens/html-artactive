@@ -1,0 +1,64 @@
+.about-me {
+  padding-top: 140px;
+
+  .heading {
+    text-align: center;
+
+    &__title {
+      @include font-primary(42px, $color-2, 400);
+    }
+  }
+
+  .content {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, auto));
+    grid-column-gap: 65px;
+
+    &__article {
+    }
+
+    &__title {
+      @include font-primary(26px, $color-2, 400);
+    }
+
+    &__text {
+      @include font-secondary(16px, $color-10, 400, 22px);
+      margin-top: 30px;
+
+      &:first-of-type {
+        margin-top: 10px;
+      }
+    }
+
+    &__action {
+      margin-top: 20px;
+    }
+
+    &__button {
+      @include font-secondary(22px, $color-3, 700);
+      transition: all 0.25s;
+
+      &:hover {
+        @include font-secondary(22px, $color-4, 700);
+      }
+
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    &__wrapper-img {
+      justify-self: end;
+    }
+
+    &__img {
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__container {
+  }
+}

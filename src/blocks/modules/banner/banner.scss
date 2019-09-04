@@ -1,0 +1,52 @@
+.banner {
+  padding: 140px 0;
+  background: url('../img/bg-1-2.jpg') no-repeat 50% 30% / cover;
+
+  .heading {
+    max-width: 530px;
+
+    &__title {
+      @include font-primary(50px, $color-1, 400);
+    }
+  }
+
+  .content {
+    margin-top: 30px;
+    max-width: 530px;
+
+    &__text {
+      @include font-secondary(20px, $color-1, 400, 26px);
+    }
+
+    &__action {
+      margin-top: 40px;
+    }
+
+    &__button {
+      @include font-secondary(20px, $color-1, 700);
+      width: 100%;
+      max-width: 290px;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: $color-3;
+      transition: all 0.25s;
+
+      &:hover {
+        background-color: $color-4;
+      }
+
+      &:disabled {
+        @include font-secondary(20px, $color-11, 700);
+        background-color: $color-13;
+      }
+
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+
+  &__container {
+  }
+}

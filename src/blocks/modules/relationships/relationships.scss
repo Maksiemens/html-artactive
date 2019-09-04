@@ -1,0 +1,57 @@
+.relationships {
+  margin-top: 80px;
+  padding-bottom: 140px;
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &__title {
+      @include font-primary(42px, $color-2, 400);
+      max-width: 530px;
+    }
+  }
+
+  .content {
+    margin-top: 50px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 345px);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+  }
+
+  .card {
+
+    &__avatar {
+    }
+
+    &__img {
+      display: block;
+      object-fit: cover;
+    }
+
+    &__body {
+      margin-top: 30px;
+    }
+
+    &__header {
+    }
+
+    &__title {
+      @include font-primary(26px, $color-2, 400);
+    }
+
+    &__text {
+      @include font-secondary(16px, $color-10, 400, 22px);
+      margin-top: 10px;
+    }
+  }
+
+  &__container {
+  }
+}
